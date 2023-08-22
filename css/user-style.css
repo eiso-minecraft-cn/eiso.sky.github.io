@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#header:not(.sticky-header) #logo a {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.c8372 {
+    color: black;
+    width: 155px;
+    height: 54.333343505859375px;
+}
+
+img {
+    pointer-events: none;
+}
+
+.welcome-area {
+    background-image: url(../img/back.png);
+}
+
+.mini {
+    background-image: url(../img/back2.png);
+}
+
+.counter {
+    background-image: url(../img/back4.jpg);
+}
+
+/**.col-lg-1
+{
+    animation: changeColor 5s infinite linear;
+}
+@keyframes changeColor {
+    0% { background-color: #87CEFA; }
+    50% { background-color: #ffb7a1; }
+    100% { background-color: #87CEFA; }
+}*/

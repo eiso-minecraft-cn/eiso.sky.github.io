@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛋壳岛工作室 | 成员详细页面</title>
+    <link rel="shortcut icon" href="img/main/member_main.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+        <style>
+            .floating-window {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                border: 1px solid transparent;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+                z-index: 9999;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                color: #fff;
+                border-radius: 10px;
+                animation: changeColor 5s infinite linear;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .floating-window img {
+                border-radius: 50%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            .floating-window.visible {
+                opacity: 1;
+            }
+    
+            .floating-window p {
+                font-size: 24px;
+                color: white;
+                text-shadow: 1px 1px 2px black;
+                margin-top: 10px;
+                text-align: center;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            @keyframes changeColor {
+                0% { background-color: #87CEFA; } /* 天蓝色 */
+                50% { background-color: #90EE90; } /* 淡绿色 */
+                100% { background-color: #87CEFA; } /* 天蓝色 */
+            }
+        </style>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+<div class="container right-panel-active">
+
+    <div class="container_from container_signup">
+        <form action="#" class="from" id="from1">
+            <h2 class="form_title">参与地图</h2>
+           
+        </form>
+    </div>
+
+    <div class="container_from container_signin">
+
+        <form action="login" class="from" id="from2" method="post">
+            <h2 class="form_title">成员简介</h2>
+            <img src="https://thirdqq.qlogo.cn/g?b=sdk&k=0ibwTje0YDsGHpveJJ4GUcQ&kti=ZHtPdgAAAAI&s=5&t=1670278511" alt="QQface" width="50" height="50" id="m-skin-image">
+
+            <div class="floating-window">
+                <div id="player-model"></div>
+                <p>· 柴犬 ·<br>· 工作室的领导者 ·<br>· 脑子里总有各种奇奇怪怪的想法 ·</p>
+            </div>
+        
+
+           
+        </form>
+
+
+
+
+    </div>
+
+    <div class="container_overlay">
+        <div class="overlay">
+            <div class="overlay_panel ov_left">
+                <button class="btn" id="signin">参与地图</button>
+            </div>
+            <div class="overlay_panel ov_right">
+                <button class="btn" id="signup">成员简介</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const mSkinImage = document.getElementById('m-skin-image');
+    const floatingWindow = document.querySelector('.floating-window');
+    const playerModel = document.getElementById('player-model');
+
+    const username = 'XMZ_Chai_Quan';
+    const playerModelUrl = `https://minotar.net/bust/${username}/200.png`;
+
+    playerModel.innerHTML = `
+        <img src="${playerModelUrl}" alt="m-skin">
+    `;
+    
+    mSkinImage.addEventListener('mouseenter', () => {
+        floatingWindow.classList.add('visible');
+    });
+
+    mSkinImage.addEventListener('mouseleave', () => {
+        floatingWindow.classList.remove('visible');
+    });
+</script>
+
+<script src="js/member.lin.js"></script>
+<script src="js/member.tur.js"></script>
+</body>
+</html>
