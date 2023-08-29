@@ -59,19 +59,19 @@
             overflow-y: scroll;
         }
   
-    /* 使view标签隐藏 */
-    /* .show {
+
+     .show {
         display: flex;
     }
     .hide {
         display: none;
-    } */
-    /* .nav-visible .toggle-view {
+    }
+     .nav-visible .toggle-view {
         display: flex;
     }
     .nav-hidden .toggle-view {
         display: none;
-    } */
+    }
   </style>
   
 <div id="app" style="display: flex;flex-flow: column;margin: 20 ">
@@ -84,9 +84,9 @@
   
                     <view style="width: 400rpx; display: flex; align-items: center;">                        
                         <view style="border-radius: 35rpx;">
-                            <text style="word-break: break-all;">{{x.msg}}&nbsp;&nbsp;</text>
+                            <text style="word-break: break-all;">你好!&nbsp;&nbsp;</text>
                         </view>
-                        <image src="https://img2.woyaogexing.com/2017/07/07/67ca73a32fe97f63!400x400_big.jpg" style="width: 40px; height: 40px; border-radius: 20px;"></image>
+                        <image src="img/tr_2.png" style="width: 40px; height: 40px; border-radius: 20px;"></image>
                     </view>
   
                 </view>
@@ -98,7 +98,7 @@
                     <view style="width: 500rpx;display: flex; align-items: center;">
                         <image src="img/gpt.png" style="width: 40px; height: 40px; border-radius: 20px;"></image>
                         <view style="border-radius: 35rpx;background-color: #f9f9f9;">
-                            <text style="word-break: break-all;">&nbsp;&nbsp;{{x.msg}}</text>
+                            <text style="word-break: break-all;">&nbsp;你好我是openAI机器人</text>
                             &nbsp;
                         </view>
                     </view>
@@ -133,7 +133,7 @@
                 placeholder-class="my-neirong-sm" placeholder="用一句简短的话描述您的问题" />
             <button @click="msgLoad" :disabled="msgLoad" style="height: 45px;
             width: 20%;;
-    color: #030303;    border-radius: 2500px;">{{sentext}}</button>
+    color: #030303;    border-radius: 2500px;">发送消息</button>
         </view>
     </view>
   
